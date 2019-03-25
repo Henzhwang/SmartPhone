@@ -39,5 +39,19 @@ public class SmartPhoneDriver {
 
         //Display phone with app list
         JOptionPane.showMessageDialog(null, sp);
+        String remove = JOptionPane.showInputDialog("Please enter the apps number you want to remove from your phone:\n"
+                + "Type NO when not needed");
+        
+                if (remove != "NO")
+                {
+                    
+                    int num = Integer.parseInt(remove);
+                    sp.removeApp(num);
+                    JOptionPane.showMessageDialog(null, sp);
+                }
+                else
+                {
+                   JOptionPane.showMessageDialog(null,"Thank you!"); 
+                }
     }
 }
